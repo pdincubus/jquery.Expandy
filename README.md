@@ -59,7 +59,7 @@ The important parts are to ensure that the container has a set width and height,
 	width: 1000px;
 	height: 240px;
 }
-
+	
 #expandy li {
 	float: left;
 	position: relative;
@@ -69,15 +69,16 @@ The important parts are to ensure that the container has a set width and height,
 	overflow: hidden;
 	cursor: pointer;
 }
-
+	
 #expandy li a {
 	display: block;
 	color: #fff;
 	text-decoration: none;
 	height: 240px;
+	position: relative;
 }
-
-
+	
+	
 #expandy li h2 {
 	font-size: 14px;
 	margin: 0;
@@ -85,6 +86,15 @@ The important parts are to ensure that the container has a set width and height,
 	overflow: hidden;
 	position: absolute;
 	bottom: 30px;
+	left: 30px;
+}
+	
+#expandy li p {
+	width: 800px;
+	font-size: 14px;
+	margin: 0;
+	position: absolute;
+	top: 30px;
 	left: 30px;
 }
 
@@ -110,10 +120,14 @@ Call expandy to run. This doesn't have to be $(window).load, it could be $(docum
 ```javascript
 $(window).load(function() {
 	$('#expandy').expandy({
+		'animationDuration' : 250,
+		'slideEasing'		: 'easeOutBounce',
+		'textSizeEasing'	: 'easeInOutExpo',
 		'fontSizeSmall'		: '14px',
 		'fontSizeLarge'		: '30px',
 		'compressedSize'	: '100px',
 		'expandedSize'		: '500px',
+		'firstOpen'			: 0
 	});
 });
 ```
@@ -121,15 +135,16 @@ $(window).load(function() {
 The full list of configurable settings (and the defaults) are as follows:
 
 ```javascript
-'slideElement' 			: 'li',
-'animationDuration' 	: 500,			//milliseconds
+'slideElement' 			: 'li',			//the elements under the container that will be expandable
+'animationDuration' 	: 500,			//milliseconds - currently applied to both text and box resizing
 'slideEasing'			: 'swing',		//default options are swing or linear
-'textSizeEasing'		: 'swing',
-'compressedSize'		: '164px',
-'expandedSize'			: '500px',
-'fontSizeLarge'			: '60px',
-'fontSizeSmall'			: '20px',
-'firstOpen'				: 0				//eq starts from zero, not one.
+'textSizeEasing'		: 'swing',		//include easing plugin for more options (see demo)
+'compressedSize'		: '164px',		//size of boxes when small
+'expandedSize'			: '500px',		//size of the "expandy"
+'fontSizeLarge'			: '60px',		//size for font when expanded
+'fontSizeSmall'			: '20px',		//size for font when small again (this should really match the size you've set in the css!)
+'firstOpen'				: 0,			//eq starts from zero, not one. which box should be opened first automatically
+'textElement'			: 'h2'			//which element to apply the text resizing on
 ```
 
 The default settings are based on the container for the expandy being 1000px wide and containing 4 child items. You'll need to adjust accordingly depending on how many expandy boxes you want.

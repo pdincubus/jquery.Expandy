@@ -19,7 +19,7 @@
 				width: 1000px;
 			}
 			
-			#expandy2 {
+			#expandy {
 				list-style: none;
 				padding: 0;
 				margin: 0;
@@ -29,7 +29,7 @@
 				height: 240px;
 			}
 			
-			#expandy2 li {
+			#expandy li {
 				float: left;
 				position: relative;
 				margin: 0;
@@ -39,7 +39,7 @@
 				cursor: pointer;
 			}
 			
-			#expandy2 li a {
+			#expandy li a {
 				display: block;
 				color: #fff;
 				text-decoration: none;
@@ -48,7 +48,7 @@
 			}
 			
 		
-			#expandy2 li h2 {
+			#expandy li h2 {
 				font-size: 14px;
 				margin: 0;
 				width: 800px;
@@ -58,28 +58,37 @@
 				left: 30px;
 			}
 			
+			#expandy li p {
+				width: 800px;
+				font-size: 14px;
+				margin: 0;
+				position: absolute;
+				top: 30px;
+				left: 30px;
+			}
+			
 		
-			#expandy2 li.first {
+			#expandy li.first {
 				background: #500;
 			}
 			
-			#expandy2 li.second {
+			#expandy li.second {
 				background: #800;
 			}
 			
-			#expandy2 li.third {
+			#expandy li.third {
 				background: #b00;
 			}
 			
-			#expandy2 li.fourth {
+			#expandy li.fourth {
 				background: #e00;
 			}
 			
-			#expandy2 li.fifth {
+			#expandy li.fifth {
 				background: #f22;
 			}
 			
-			#expandy2 li.sixth {
+			#expandy li.sixth {
 				background: #f55;
 			}
 			
@@ -91,36 +100,42 @@
 
 	<body>
 			
-		<ul class="cf" id="expandy2">
+		<ul class="cf" id="expandy">
 			<li class="first">
-			<a href="http://www.google.co.uk">
-				<h2>Google</h2>
-			</a>
+				<a href="http://www.google.co.uk">
+					<h2>Google</h2>
+					<p>lorem ipsum dolor sit amet</p>
+				</a>
 			</li>
 			<li class="second">
-			<a href="http://www.bing.co.uk">
-				<h2>Bing</h2>
-			</a>
+				<a href="http://www.bing.co.uk">
+					<h2>Bing</h2>
+					<p>lorem ipsum dolor sit amet</p>
+				</a>
 			</li>
 			<li class="third">
-			<a href="http://www.yahoo.co.uk">
-				<h2>Yahoo</h2>
-			</a>
+				<a href="http://www.yahoo.co.uk">
+					<h2>Yahoo</h2>
+					<p>lorem ipsum dolor sit amet</p>
+				</a>
 			</li>
 			<li class="fourth">
-			<a href="http://www.duckduckgo.com">
-				<h2>Duck Duck Go</h2>
-			</a>
+				<a href="http://www.duckduckgo.com">
+					<h2>Duck Duck Go</h2>
+					<p>lorem ipsum dolor sit amet</p>
+				</a>
 			</li>
 			<li class="fifth">
-			<a href="http://www.lmgtfy.com">
-				<h2>Let Me Google That For you</h2>
-			</a>
+				<a href="http://www.lmgtfy.com">
+					<h2>Let Me Google That For you</h2>
+					<p>lorem ipsum dolor sit amet</p>
+				</a>
 			</li>
 			<li class="sixth">
-			<a href="http://www.github.com">
-				<h2>GitHub</h2>
-			</a>
+				<a href="http://www.github.com">
+					<h2>GitHub</h2>
+					<p>lorem ipsum dolor sit amet</p>
+				</a>
 			</li>
 		</ul>
 			
@@ -129,7 +144,7 @@
 		<script type="text/javascript" src="jquery.Expandy.js"></script>
 		<script type="text/javascript">
 			$(window).load(function() {
-				$('#expandy2').expandy({
+				$('#expandy').expandy({
 					'animationDuration' : 250,
 					'slideEasing'		: 'easeOutBounce',
 					'textSizeEasing'	: 'easeInOutExpo',
