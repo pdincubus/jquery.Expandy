@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Expandy</title>
+		<style type="text/css">
+			* {
+				box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+			}
+		
+			body {
+				color: #fff;
+				background: #000;
+				font: 14px helvetica, arial, verdana, sans-serif;
+				position: relative;
+				margin: 50px auto;
+				width: 1000px;
+			}
+			
+			#expandy2 {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				position: relative;
+				overflow: hidden;
+				width: 1000px;
+				height: 240px;
+			}
+			
+			#expandy2 li {
+				float: left;
+				position: relative;
+				margin: 0;
+				width: 100px;
+				height: 240px;
+				overflow: hidden;
+				cursor: pointer;
+			}
+			
+			#expandy2 li a {
+				display: block;
+				color: #fff;
+				text-decoration: none;
+				height: 240px;
+				position: relative;
+			}
+			
+		
+			#expandy2 li h2 {
+				font-size: 14px;
+				margin: 0;
+				width: 800px;
+				overflow: hidden;
+				position: absolute;
+				bottom: 30px;
+				left: 30px;
+			}
+			
+		
+			#expandy2 li.first {
+				background: #500;
+			}
+			
+			#expandy2 li.second {
+				background: #800;
+			}
+			
+			#expandy2 li.third {
+				background: #b00;
+			}
+			
+			#expandy2 li.fourth {
+				background: #e00;
+			}
+			
+			#expandy2 li.fifth {
+				background: #f22;
+			}
+			
+			#expandy2 li.sixth {
+				background: #f55;
+			}
+			
+			.cf:before, .cf:after { content: ""; display: table; }
+			.cf:after { clear: both; }
+			.cf { *zoom: 1; }
+		</style>
+	</head>
+
+	<body>
+			
+		<ul class="cf" id="expandy2">
+			<li class="first">
+			<a href="http://www.google.co.uk">
+				<h2>Google</h2>
+			</a>
+			</li>
+			<li class="second">
+			<a href="http://www.bing.co.uk">
+				<h2>Bing</h2>
+			</a>
+			</li>
+			<li class="third">
+			<a href="http://www.yahoo.co.uk">
+				<h2>Yahoo</h2>
+			</a>
+			</li>
+			<li class="fourth">
+			<a href="http://www.duckduckgo.com">
+				<h2>Duck Duck Go</h2>
+			</a>
+			</li>
+			<li class="fifth">
+			<a href="http://www.lmgtfy.com">
+				<h2>Let Me Google That For you</h2>
+			</a>
+			</li>
+			<li class="sixth">
+			<a href="http://www.github.com">
+				<h2>GitHub</h2>
+			</a>
+			</li>
+		</ul>
+			
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://cachedcommons.org/cache/jquery-easing/1.3.0/javascripts/jquery-easing-min.js"></script>
+		<script type="text/javascript" src="jquery.Expandy.js"></script>
+		<script type="text/javascript">
+			$(window).load(function() {
+				$('#expandy2').expandy({
+					'animationDuration' : 250,
+					'slideEasing'		: 'easeOutBounce',
+					'textSizeEasing'	: 'easeInOutExpo',
+					'fontSizeSmall'		: '14px',
+					'fontSizeLarge'		: '30px',
+					'compressedSize'	: '100px',
+					'expandedSize'		: '500px',
+					'firstOpen'			: 0
+				});
+			});
+		</script>	
+	</body>
+</html>
