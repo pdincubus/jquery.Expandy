@@ -148,3 +148,7 @@ The full list of configurable settings (and the defaults) are as follows:
 ```
 
 The default settings are based on the container for the expandy being 1000px wide and containing 4 child items. You'll need to adjust accordingly depending on how many expandy boxes you want.
+
+## Browsers
+
+I've tested and seen this working on Chrome, Safari, Opera, and Firefox on Mac OSX. It should work fine in Internet Explorer 6 (maybe?) onwards. Further testing to be done when I decide I really want to open that browser to do the testing!
